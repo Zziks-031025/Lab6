@@ -1,0 +1,142 @@
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --card-bg: rgba(255, 255, 255, 0.9);
+        }
+    
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .resume-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .resume-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+        }
+        
+        .resume-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            font-size: 1.8em;
+            color: white;
+            padding: 15px;
+            margin: -25px -25px 20px -25px;
+            background: linear-gradient(45deg, var(--secondary-color), #55aaff);
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .info-icon {
+            font-size: 1.2em;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .info-icon:hover {
+            transform: rotate(15deg) skew(-5deg);
+            color: var(--accent-color);
+        }
+        
+        .info-label {
+            font-weight: 600;
+            min-width: 80px;
+            color: var(--primary-color);
+        }
+        
+        .info-content {
+            flex: 1;
+            color: var(--text-color);
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .section-title {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin: 25px 0 15px;
+        }
+        
+        .skills-list, .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag, .hobby-tag {
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        
+        .hobby-tag {
+            background: var(--accent-color);
+        }
+        
+        .self-intro {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        @media (max-width: 768px) {
+            .resume-card {
+                min-width: 100%;
+            }
+        }
